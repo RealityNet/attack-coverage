@@ -113,6 +113,8 @@ I will update the Excel file when new Attack version will be available. Still, i
 
 As explained in the "*how to update*" section, the starting files to build AttackCoverage.xlsx are the CSV ones. Those files are built by using the Python3 scripts you'll find in the **script** folder: you can use by yourselves to build your own *coverage* approach. There is one major requirement, which is the (awesome) **attackcti** library provided by Roberto Rodriguez (@Cyb3rWard0g) and Jose Luis Rodriguez (@Cyb3rPandaH). Then the Excel file is using *tables*, formulas and conditional formatting: easy as it is, no *macro(s)* in place ;)
 
+Note that in the **version** worksheet is reported the Attack Framework version used: in the current scenario is **version 8, October 2020**. Cell "*Based on template version*" is used to track the different customers' excel files used to create their own, while "*Current Excel file version*" reflects any modification made to a specific instance (eg: when adding a new detection rule, etc.).
+
 ## credits
 
 Kudos and thanks to Roberto Rodriguez (@Cyb3rWard0g) for his *attackcti* framework and, more important, for the inspiration I got from his blog post "How Hot Is Your Hunt Team? " at https://cyberwardog.blogspot.com/2017/07/how-hot-is-your-hunt-team.html
