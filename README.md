@@ -47,7 +47,7 @@ What you are currently detecting in terms of techniques and sub-techniques, orga
 
 You'll spot that COVERAGE will address only Techniques organized in the "*classic*" Attack way, by Tactics. In the end, for each Tactics, you'll get the total coverage.
 
-## *I have a new fancy sub-techniques not included in the Attack framework!*
+## *I have a new fancy sub-technique not included in the Attack framework!*
 
 This is supercool, and the Excel file is already built to cover that. Place the detection rule by using the **detection** worksheet and assign to the "*OS Credential Dumping (T1003)*" technique, since it will not apply to any of the sub-techniques described by the Attack framework.
 
@@ -69,7 +69,7 @@ No more errors: STATUS and COVERAGE will reflect this new addendum.
 
 ![COVERAGE](/images/ac_img_11.png)
 
-## *I want to disable some techniques, I'm not interested in covering them!*
+## *I want to disable some techniques/sub-techniques, I don't need them*
 
 Again, the Excel file is built to support this, by using the "**detection rules modifier**" in the *techniques* worksheet. Suppose you want to disable "*At (Linux) (T1053.001)*" sub-technique since you have no Linux hosts. Simply put **-1** in the cell related to T1053.001, as shown in the next pictures.
 
