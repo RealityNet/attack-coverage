@@ -47,13 +47,13 @@ What you are currently detecting in terms of techniques and sub-techniques, orga
 
 You'll spot that COVERAGE will address only Techniques organized in the "*classic*" Attack way, by Tactics. In the end, for each Tactics, you'll get the total coverage.
 
-### *hey, I have a new fancy sub-techniques not included in the Attack framework*
+## *I have a new fancy sub-techniques not included in the Attack framework!*
 
 This is supercool, and the Excel file is already built to cover that. Place the detection rule by using the **detection** worksheet and assign to the "*OS Credential Dumping (T1003)*" technique, since it will not apply to any of the sub-techniques described by the Attack framework.
 
 ![detections](/images/ac_img_7.png)
 
-Go back to **techniques**: now you got **2** detection rules for T1003, one from T1003.001 and one directly applied to T1003. Unfortunately this is **unexpected**: techniques with sub-techniques are not expected to have detection rules direclty applied to them! This **error** is reported in the "*Error checks*" column.
+Go back to **techniques**: now you got **2** detection rules for T1003, one from T1003.001 and one directly applied to T1003 (column "*detection rules for technique*"). Unfortunately this is **unexpected**: techniques with sub-techniques are not expected to have detection rules applied **directly** to them! This **error** is reported in the "*Error checks*" column: always check it!
 
 ![techniques](/images/ac_img_8.png)
 
@@ -63,11 +63,49 @@ How to handle that? Easy, that's the reason of the *white* column "**detection r
 
 ![techniques](/images/ac_img_9.png)
 
-No more errors: STATUS and COVERAGE will reflect this new addendum
+No more errors: STATUS and COVERAGE will reflect this new addendum.
 
 ![STATUS](/images/ac_img_10.png)
 
 ![COVERAGE](/images/ac_img_11.png)
+
+## *I want to disable some techniques, I'm not interested in covering them!*
+
+Again, the Excel file is built to support this, by using the "**detection rules modifier**" in the *techniques* worksheet. Suppose you want to disable "*At (Linux) (T1053.001)*" sub-technique since you have no Linux hosts. Simply put **-1** in the cell related to T1053.001, as shown in the next pictures.
+
+![techniques](/images/ac_img_12.png)
+
+This will be reflected in the STATUS too: note that T1053.001 is used in different Tactics.
+
+![STATUS](/images/ac_img_13.png)
+
+What if you want to disable not just that sub-technique but **the whole** T1053 one? Simply put **-1** in each sub-technique belonging to T1053, as shown: you don't need to put a *-1* to the Technique itself, unless it's a Technique without sub-techniques.
+
+![techniques](/images/ac_img_14.png)
+
+Again, the disabled technique (and its sub-techniques) will be shown in **STATUS**.
+
+![STATUS](/images/ac_img_15.png)
+
+What about the **COVERAGE**? It will reflect this fact by putting 100% for the Technique. It could sound *weird*, but indeed it's better not to *remove* it to maintain the *awaraness*.
+
+![COVERAGE](/images/ac_img_16.png)
+
+## *I have a custom data source not in the Attack list!*
+
+This is a bit annoying to update. Use the **sources** worksheet and *insert* a new row: this *insertion* will update the *table*. For example, insert the *Custom data source* as shown
+
+![sources](/images/ac_img_17.png)
+
+Then, **for each of the techniques** involved by this new source you have to update the *data sources* column in the **techniques** worksheet: remember that each source is separated by the *pipe*, "|".
+
+![techniques](/images/ac_img_18.png)
+
+Not the best solution, indeed. A better one should be implemented. After the update, the T1098 will become *yellow*, as expected.
+
+![techniques](/images/ac_img_19.png)
+
+## how to update
 
 
 
