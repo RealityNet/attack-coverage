@@ -35,11 +35,39 @@ In the current scenario, the minimum expected detection rule for T1003.001 is *1
 
 ![techniques](/images/ac_img_4.png)
 
-## the **STATUS** worksheet
+## the **STATUS** and the **COVERAGE** worksheets
 
 What you are currently detecting in terms of techniques and sub-techniques, organized by *tactics*, is shown into the STATUS worksheet. It's a better view of the work done, what you're missing entirely (no data sources available!) and what you could detect if you'll prepare the proper detection rules.
 
 ![STATUS](/images/ac_img_5.png)
+
+"*Wait a moment. Why in the STATUS cells related to T1003 and T1003.001 we have 0 detection rules and 1 detection rules? And both are green?*". Remember that the STATUS worksheet represents what you are detecting (techniques and sub-techniques) and what you are not. For the *coverage* there is the COVERAGE worksheet. As shown in the next picture, the COVERAGE will report *13%* for the Technique, since you have just 1 out of 8 detection rules expected for T1003.
+
+![COVERAGE](/images/ac_img_6.png)
+
+You'll spot that COVERAGE will address only Techniques organized in the "*classic*" Attack way, by Tactics. In the end, for each Tactics, you'll get the total coverage.
+
+### *hey, I have a new fancy sub-techniques not included in the Attack framework*
+
+This is supercool, and the Excel file is already built to cover that. Place the detection rule by using the **detection** worksheet and assign to the "*OS Credential Dumping (T1003)*" technique, since it will not apply to any of the sub-techniques described by the Attack framework.
+
+![detections](/images/ac_img_7.png)
+
+Go back to **techniques**: now you got **2** detection rules for T1003, one from T1003.001 and one directly applied to T1003. Unfortunately this is **unexpected**: techniques with sub-techniques are not expected to have detection rules direclty applied to them! This **error** is reported in the "*Error checks*" column.
+
+![techniques](/images/ac_img_8.png)
+
+> You can't have more detection rules than the expected ones! Coverage will be wrong. Remember the minimum expected ones: **1** for Techniques without any sub-technique; **n** for Techniques with *n* sub-techniques **and 0** for the Technique itself.
+
+How to handle that? Easy, that's the reason of the *white* column "**detection rules modifier**". Just add *1* to the T1003 related cell: it means we *expect* a detection rule that will *direclty* target the "main" Technique T1003. See the pictures.
+
+![techniques](/images/ac_img_9.png)
+
+No more errors: STATUS and COVERAGE will reflect this new addendum
+
+![STATUS](/images/ac_img_10.png)
+
+![COVERAGE](/images/ac_img_11.png)
 
 
 
