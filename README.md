@@ -7,11 +7,11 @@ The Excel file *AttackCoverage.xlsx* can be used to get a *coverage measure* of 
 
 ## AttackCoverage.xlsx
 
-Before a brief explanation about the usage, please consider that all the 7 worksheet share specific characteristics. The *header* of each worksheet has colours: *gray* means a static fields, strings or numbers; *blue* means calculated values, with formulas; *white* means columns (cells) that expect an input from the users. Usually you will not mess with gray or blue columns, with exceptions. *White* columns with "Active" or "IsActive" captions expect to be blank or filled with the string "*yes*": there is not a "*no*", just "*yes*" or blank.
+Before a brief explanation about the usage, please consider that all the 7 worksheets share specific characteristics. The *header* of each worksheet has colours: *gray* means a static fields, strings or numbers; *blue* means calculated values, with formulas; *white* means columns (cells) that expect an input from the users. Usually you will not mess with gray or blue columns, with exceptions. *White* columns with "Active" or "IsActive" captions expect to be blank or filled with the string "*yes*": there is not a "*no*", just "*yes*" or blank.
 
 ## adding the first *detection rule*
 
-From the *blue team* perspective, the great part of the job will be done in the **detections** worksheet. Here is where you'll set your detection rules: the provided worksheet has the first four columns as an example, but you can add/remove/change them. Unless you're modifying the excel, do not touch the "*is active*" and "*attack1..3*" columns. Let's insert the **first** detection rule, which aims to detect attackers' attempt to access the LSASS Memory, sub-technique T1003.001.
+From the *blue team* perspective, the great part of the job will be done in the **detections** worksheet. Here is where you'll set your detection rules: the provided worksheet has the first four columns as an example, and you can add/remove/change them. Unless you're modifying the excel, do not touch the "*is active*" and "*attack1..3*" columns. Let's insert the **first** detection rule, which aims to detect attackers' attempt to access the LSASS Memory, sub-technique T1003.001.
 
 ![adding detection rule](/images/ac_img_1.png)
 
@@ -111,9 +111,9 @@ I will update the Excel file when new Attack version will be available. Still, i
 
 ## how is built
 
-As explained in the "*how to update*" section, the starting files to build AttackCoverage.xlsx are the CSV ones. Those files are built by using the Python3 scripts you'll find in the **script** folder: you can use by yourselves to build your own *coverage* approach. There is one major requirement, which is the (awesome) **attackcti** library provided by Roberto Rodriguez (@Cyb3rWard0g) and Jose Luis Rodriguez (@Cyb3rPandaH).
+As explained in the "*how to update*" section, the starting files to build AttackCoverage.xlsx are the CSV ones. Those files are built by using the Python3 scripts you'll find in the **script** folder: you can use by yourselves to build your own *coverage* approach. There is one major requirement, which is the (awesome) **attackcti** library provided by Roberto Rodriguez (@Cyb3rWard0g) and Jose Luis Rodriguez (@Cyb3rPandaH). Then the Excel file is using *tables*, formulas and conditional formatting: easy as it is, no *macro(s)* in place ;)
 
 ## credits
 
-Kudos and thanks to Roberto Rodriguez (@Cyb3rWard0g) for his *attackcti* framework and, more important, for the inspiration I got from his blog post "How Hot Is Your Hunt Team? " (https://cyberwardog.blogspot.com/2017/07/how-hot-is-your-hunt-team.html)
+Kudos and thanks to Roberto Rodriguez (@Cyb3rWard0g) for his *attackcti* framework and, more important, for the inspiration I got from his blog post "How Hot Is Your Hunt Team? " at https://cyberwardog.blogspot.com/2017/07/how-hot-is-your-hunt-team.html
 
