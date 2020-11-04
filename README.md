@@ -107,9 +107,13 @@ Not the best solution, indeed. A better one should be implemented. After the upd
 
 ## how to update
 
-
+I will update the Excel file when new Attack version will be available. Still, if you'll have a filled Excel file you need a way to update your own. As you can see in this repository, there is a folder called *20201030*: this folder contains the files used to create the actual AttackCoverage.xlsx. The most important files are the **.csv** ones, because they are used to fill the "*static*" (*gray* columns) cells for **sources** (file: data_sources.csv), **tactics** (file: tactis.csv) and **techniques** (file: techniques.csv). I will then recreate those file for the new version(s), and you can simply *diff* those CSV files to properly update/insert/remove the related lines in your Excel file. It could be "*complicated*" in case of new *tactics* (as version 8 did), because wrongly updating STATUS and COVERAGE worksheets would introduce errors: so pay attention or "shout" an issue here.
 
 ## how is built
 
+As explained in the "*how to update*" section, the starting files to build AttackCoverage.xlsx are the CSV ones. Those files are built by using the Python3 scripts you'll find in the **script** folder: you can use by yourselves to build your own *coverage* approach. There is one major requirement, which is the (awesome) **attackcti** library provided by Roberto Rodriguez (@Cyb3rWard0g) and Jose Luis Rodriguez (@Cyb3rPandaH).
 
 ## credits
+
+Kudos and thanks to Roberto Rodriguez (@Cyb3rWard0g) for his *attackcti* framework and, more important, for the inspiration I got from his blog post "How Hot Is Your Hunt Team? " (https://cyberwardog.blogspot.com/2017/07/how-hot-is-your-hunt-team.html)
+
