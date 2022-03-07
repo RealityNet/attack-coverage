@@ -1,0 +1,110 @@
+data sources
+Active Directory: Active Directory Credential Request
+Active Directory: Active Directory Object Access
+Active Directory: Active Directory Object Creation
+Active Directory: Active Directory Object Deletion
+Active Directory: Active Directory Object Modification
+Application Log: Application Log Content
+Certificate: Certificate Registration
+Cloud Service: Cloud Service Disable
+Cloud Service: Cloud Service Enumeration
+Cloud Service: Cloud Service Metadata
+Cloud Service: Cloud Service Modification
+Cloud Storage: Cloud Storage Access
+Cloud Storage: Cloud Storage Creation
+Cloud Storage: Cloud Storage Deletion
+Cloud Storage: Cloud Storage Enumeration
+Cloud Storage: Cloud Storage Metadata
+Cloud Storage: Cloud Storage Modification
+Cluster: Cluster Metadata
+Command: Command Execution
+Container: Container Creation
+Container: Container Enumeration
+Container: Container Metadata
+Container: Container Start
+Domain Name: Active DNS
+Domain Name: Domain Registration
+Domain Name: Passive DNS
+Drive: Drive Access
+Drive: Drive Creation
+Drive: Drive Modification
+Driver: Driver Load
+Driver: Driver Metadata
+File: File Access
+File: File Creation
+File: File Deletion
+File: File Metadata
+File: File Modification
+Firewall: Firewall Disable
+Firewall: Firewall Enumeration
+Firewall: Firewall Metadata
+Firewall: Firewall Rule Modification
+Firmware: Firmware Modification
+Group: Group Enumeration
+Group: Group Metadata
+Group: Group Modification
+Image: Image Creation
+Image: Image Deletion
+Image: Image Metadata
+Image: Image Modification
+Instance: Instance Creation
+Instance: Instance Deletion
+Instance: Instance Enumeration
+Instance: Instance Metadata
+Instance: Instance Modification
+Instance: Instance Start
+Instance: Instance Stop
+Internet Scan: Response Content
+Internet Scan: Response Metadata
+Kernel: Kernel Module Load
+Logon Session: Logon Session Creation
+Logon Session: Logon Session Metadata
+Malware Repository: Malware Content
+Malware Repository: Malware Metadata
+Module: Module Load
+Named Pipe: Named Pipe Metadata
+Network Share: Network Share Access
+Network Traffic: Network Connection Creation
+Network Traffic: Network Traffic Content
+Network Traffic: Network Traffic Flow
+Persona: Social Media
+Pod: Pod Creation
+Pod: Pod Enumeration
+Pod: Pod Metadata
+Pod: Pod Modification
+Process: OS API Execution
+Process: Process Access
+Process: Process Creation
+Process: Process Metadata
+Process: Process Modification
+Process: Process Termination
+Scheduled Job: Scheduled Job Creation
+Scheduled Job: Scheduled Job Metadata
+Scheduled Job: Scheduled Job Modification
+Script: Script Execution
+Sensor Health: Host Status
+Service: Service Creation
+Service: Service Metadata
+Service: Service Modification
+Snapshot: Snapshot Creation
+Snapshot: Snapshot Deletion
+Snapshot: Snapshot Enumeration
+Snapshot: Snapshot Metadata
+Snapshot: Snapshot Modification
+User Account: User Account Authentication
+User Account: User Account Creation
+User Account: User Account Deletion
+User Account: User Account Metadata
+User Account: User Account Modification
+Volume: Volume Creation
+Volume: Volume Deletion
+Volume: Volume Enumeration
+Volume: Volume Metadata
+Volume: Volume Modification
+WMI: WMI Creation
+Web Credential: Web Credential Creation
+Web Credential: Web Credential Usage
+Windows Registry: Windows Registry Key Access
+Windows Registry: Windows Registry Key Creation
+Windows Registry: Windows Registry Key Deletion
+Windows Registry: Windows Registry Key Modification
